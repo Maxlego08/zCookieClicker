@@ -1,0 +1,8 @@
+name: zCookieClicker
+author: Maxlego08
+main: fr.maxlego08.cookie.CookiePlugin
+website: https://groupez.dev
+description: Cookie Cliker Plugin
+version: 1.0.0
+api-version: 1.13
+commands:

@@ -1,0 +1,120 @@
+########################################################################################################################
+#
+#   Sponsor: https://serveur-minecraft-vote.fr/
+#   Discord: https://discord.groupez.dev/
+#
+#    ░█████╗░░█████╗░░█████╗░██╗░░██╗██╗███████╗  ░█████╗░██╗░░░░░██╗░█████╗░██╗░░██╗███████╗██████╗░
+#    ██╔══██╗██╔══██╗██╔══██╗██║░██╔╝██║██╔════╝  ██╔══██╗██║░░░░░██║██╔══██╗██║░██╔╝██╔════╝██╔══██╗
+#    ██║░░╚═╝██║░░██║██║░░██║█████═╝░██║█████╗░░  ██║░░╚═╝██║░░░░░██║██║░░╚═╝█████═╝░█████╗░░██████╔╝
+#    ██║░░██╗██║░░██║██║░░██║██╔═██╗░██║██╔══╝░░  ██║░░██╗██║░░░░░██║██║░░██╗██╔═██╗░██╔══╝░░██╔══██╗
+#    ╚█████╔╝╚█████╔╝╚█████╔╝██║░╚██╗██║███████╗  ╚█████╔╝███████╗██║╚█████╔╝██║░╚██╗███████╗██║░░██║
+#    ░╚════╝░░╚════╝░░╚════╝░╚═╝░░╚═╝╚═╝╚══════╝  ░╚════╝░╚══════╝╚═╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝
+#
+# Commands:
+#  /cookie - zcookieclicker.use - Open inventory
+#  /cookie reload - zcookieclicker.reload - Reload configuration files
+#
+# Placeholders:
+#  %zcookieclicker_cookie%
+#  %zcookieclicker_cps%
+#  %zcookieclicker_upgrade_<upgrade name>%
+#
+########################################################################################################################
+
+# Connect the plugin to an SQL database.
+#
+# SQL is used here solely as a storage system. It cannot be used to synchronize items between different servers.
+sql:
+  type: SQLITE # SQLITE, MYSQL and HIKARI
+  # The username for the SQL database.
+  user: homestead
+  # The password for the SQL database.
+  password: secret
+  # The port number for the SQL database connection.
+  port: 3306
+  # The host address for the SQL database.
+  host: 192.168.10.10
+  # The name of the SQL database.
+  database: zcookieclicker
+  # Table prefix. If you change this, you need to change it in the scripts folder too.
+  prefix: "zcookieclicker_"
+  # Number of retry attempts for SQL connection.
+  retry: 5
+  # Enable debug mode for SQL queries.
+  debug: false
+
+price-upgrade-percent: 15
+
+decimal-format: "#,###.#"
+
+upgrades:
+  - type: "MANUAL_CLICK"
+    cost: 10
+    cps: 0.1
+
+  - type: "GRANDMA"
+    cost: 100
+    cps: 1
+
+  - type: "FARM"
+    cost: 1100
+    cps: 8
+
+  - type: "FACTORY"
+    cost: 12000
+    cps: 47
+
+  - type: "MINE"
+    cost: 130000
+    cps: 260
+
+  - type: "BANK"
+    cost: 1400000
+    cps: 1400
+
+  - type: "TEMPLE"
+    cost: 20000000
+    cps: 7800
+
+  - type: "TOWER"
+    cost: 330000000
+    cps: 44000
+
+  - type: "TIME_MACHINE"
+    cost: 51000000000
+    cps: 2600000
+
+  - type: "ANTIMATTER_CONDENSER"
+    cost: 1000000000000
+    cps: 13000000
+
+  - type: "PRISM"
+    cost: 170000000000000
+    cps: 430000000
+
+  - type: "CHANCELLERY"
+    cost: 2100000000000000
+    cps: 7000000000
+
+  - type: "DIMENSIONAL_CORRIDOR"
+    cost: 64000000000000000
+    cps: 1200000000000
+
+  - type: "CELESTIAL_OVENS"
+    cost: 170000000000000000
+    cps: 44000000000000
+
+short-number-format:
+  enabled: true
+  decimal-format: "#.##"
+  suffixes:
+    - ""
+    - "K"
+    - "M"
+    - "B"
+    - "T"
+    - "Qa"  # Quadrillions
+    - "Qi"  # Quintillions
+    - "Sx"  # Sextillions
+    - "Sp"  # Septillions
+    - "Oc"  # Octillions

@@ -1,0 +1,22 @@
+name: "#8c8c8cᴄᴏᴏᴋɪᴇ ᴄʟɪᴄᴋᴇʀ"
+size: 54
+items:
+  cookie:
+    type: ZCOOKIECLICKER_COOKIE
+    slot: 22
+    item:
+      material: COOKIE
+      lore:
+        - ""
+        - " &f⌂ #e6fff3Cookie#8c8c8c: #92bed8%cookie%"
+        - " &f☆ #e6fff3Cookie Per Second#8c8c8c: #ffacd5%cookie-per-seconds%"
+        - ""
+  upgrade:
+    type: INVENTORY
+    inventory: cookies-upgrade
+    slot: 49
+    item:
+      material: NETHER_STAR
+      name: "#92bed8ᴜᴘɢʀᴀᴅᴇs"
+      lore:
+        - "#8c8c8c• #92bed8ᴄʟɪᴄᴋ #e6fff3ᴛᴏ ᴏᴘᴇɴ #8c8c8c• "
