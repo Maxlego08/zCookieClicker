@@ -39,6 +39,10 @@ public class CookiePlayer {
         return upgrades;
     }
 
+    public BigDecimal getUpgrade(CookieUpgrade cookieUpgrade) {
+        return upgrades.getOrDefault(cookieUpgrade, BigDecimal.ZERO);
+    }
+
     public BigDecimal getCookiePerSeconds() {
         var cookieUpgrades = this.plugin.getCookieManager().getUpgrades();
         AtomicReference<BigDecimal> totalCPS = new AtomicReference<>(BigDecimal.ZERO);

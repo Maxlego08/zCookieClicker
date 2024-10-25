@@ -90,6 +90,8 @@ public class CookieManager extends ZUtils implements Listener {
 
     public void loadInventories() {
 
+        this.loadPatterns();
+
         var inventoryManager = this.plugin.getInventoryManager();
         inventoryManager.deleteInventories(this.plugin);
 
@@ -108,6 +110,31 @@ public class CookieManager extends ZUtils implements Listener {
         files(folder, file -> {
             try {
                 inventoryManager.loadInventory(this.plugin, file);
+            } catch (InventoryException exception) {
+                exception.printStackTrace();
+            }
+        });
+    }
+
+    private void loadPatterns() {
+
+        var patternManager = this.plugin.getPatternManager();
+
+        File folder = new File(plugin.getDataFolder(), "patterns");
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
+        var files = List.of("cookie-upgrade");
+        for (String file : files) {
+            if (!new File(folder, file + ".yml").exists()) {
+                this.plugin.saveResource("patterns/" + file + ".yml", false);
+            }
+        }
+
+        files(folder, file -> {
+            try {
+                patternManager.loadPattern(file);
             } catch (InventoryException exception) {
                 exception.printStackTrace();
             }
@@ -144,7 +171,7 @@ public class CookieManager extends ZUtils implements Listener {
 
     public BigDecimal calculatePrice(CookieUpgrade cookieUpgrade, BigDecimal upgradeAmount) {
 
-        BigDecimal price = this.upgrades.getOrDefault(cookieUpgrade, new UpgradeData(BigDecimal.ONE, BigDecimal.ZERO)).cost();
+        BigDecimal price = getUpgrade(cookieUpgrade).cost();
 
         if (upgradeAmount.longValue() < 1) {
             return price;
@@ -196,5 +223,9 @@ public class CookieManager extends ZUtils implements Listener {
 
         DecimalFormat currentFormat = new DecimalFormat(decimalFormatPattern);
         return currentFormat.format(scaledValue) + suffixes.get(suffixIndex);
+    }
+
+    public UpgradeData getUpgrade(CookieUpgrade cookieUpgrade) {
+        return this.upgrades.getOrDefault(cookieUpgrade, new UpgradeData(BigDecimal.ONE, BigDecimal.ZERO));
     }
 }

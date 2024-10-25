@@ -15,4 +15,9 @@ public enum CookieUpgrade {
     CHANCELLERY,
     DIMENSIONAL_CORRIDOR,
     CELESTIAL_OVENS;
+
+    public CookieUpgrade getPreviousUpgrade() {
+        int ordinal = this.ordinal();
+        return ordinal > 0 ? CookieUpgrade.values()[ordinal - 1] : null;
+    }
 }

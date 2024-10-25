@@ -1,0 +1,40 @@
+name: "cookie-upgrade"
+type: BUTTON
+button:
+  type: ZCOOKIECLICKER_CHECK
+  upgrade: '%upgrade%'
+  slot: '%slot%'
+  item:
+    material: '%material%'
+    name: '#e6fff3??????'
+    lore:
+      - ""
+      - " &f⌂ #e6fff3Price#8c8c8c: #92bed8?"
+      - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5?"
+      - " &f⌚ #e6fff3CPS#8c8c8c: #969696?"
+      - ""
+  else:
+    type: ZCOOKIECLICKER_UPGRADE
+    upgrade: '%upgrade%'
+    item:
+      material: '%material%'
+      name: "#e6fff3%upgrade-name%"
+      amount: "%amount-integer%"
+      lore:
+        - ""
+        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
+        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
+        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
+        - ""
+        - "&7Click to buy"
+    else:
+      item:
+        material: '%material%'
+        name: "#e6fff3%upgrade-name%"
+        lore:
+          - ""
+          - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
+          - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
+          - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
+          - ""
+          - "&cYou don’t have enough cookie"
