@@ -5,7 +5,7 @@ button:
   upgrade: '%upgrade%'
   slot: '%slot%'
   item:
-    material: '%material%'
+    material: STRUCTURE_VOID
     name: '#e6fff3??????'
     lore:
       - ""
@@ -28,6 +28,8 @@ button:
         - ""
         - "&7Click to buy"
     else:
+      type: ZCOOKIECLICKER_INFO
+      upgrade: '%upgrade%'
       item:
         material: '%material%'
         name: "#e6fff3%upgrade-name%"

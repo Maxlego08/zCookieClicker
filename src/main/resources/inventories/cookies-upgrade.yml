@@ -10,212 +10,127 @@ items:
       name: "&cBack"
 
   manual-click:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: MANUAL_CLICK
-    slot: 19
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 19
       material: WOODEN_SWORD
-      name: "#e6fff3Manual Click"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: MANUAL_CLICK
+      upgrade-name: 'Manual Click'
 
   grand-ma:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: GRANDMA
-    slot: 20
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 20
       material: CAKE
-      name: "#e6fff3Grand Ma"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: GRANDMA
+      upgrade-name: 'Grand Ma'
 
   farm:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: FARM
-    slot: 21
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 21
       material: WHEAT
-      name: "#e6fff3Farm"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: FARM
+      upgrade-name: 'Farm'
 
   factory:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: FACTORY
-    slot: 22
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 22
       material: BRICK
-      name: "#e6fff3Factory"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: FACTORY
+      upgrade-name: 'Factory'
 
   mine:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: MINE
-    slot: 23
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 23
       material: IRON_PICKAXE
-      name: "#e6fff3Mine"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: MINE
+      upgrade-name: 'Mine'
 
   bank:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: BANK
-    slot: 24
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 24
       material: GOLD_INGOT
-      name: "#e6fff3Bank"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: BANK
+      upgrade-name: 'Bank'
 
   temple:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: TEMPLE
-    slot: 25
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 25
       material: ENCHANTED_BOOK
-      name: "#e6fff3Temple"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: TEMPLE
+      upgrade-name: 'Temple'
 
   tower:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: TOWER
-    slot: 28
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 28
       material: NETHER_BRICK
-      name: "#e6fff3Tower"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: TOWER
+      upgrade-name: 'Tower'
 
   time-machine:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: TIME_MACHINE
-    slot: 29
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 29
       material: CLOCK
-      name: "#e6fff3Time Machine"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: TIME_MACHINE
+      upgrade-name: 'Time Machine'
 
   antimatter-condenser:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: ANTIMATTER_CONDENSER
-    slot: 30
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 30
       material: DRAGON_EGG
-      name: "#e6fff3Antimatter Condenser"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: ANTIMATTER_CONDENSER
+      upgrade-name: 'Antimatter Condenser'
 
   prism:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: PRISM
-    slot: 31
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 31
       material: GLASS
-      name: "#e6fff3Prism"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: PRISM
+      upgrade-name: 'Prism'
 
   chancellery:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: CHANCELLERY
-    slot: 32
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 32
       material: BOOK
-      name: "#e6fff3Chancellery"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: CHANCELLERY
+      upgrade-name: 'Chancellery'
 
   dimensional-corridor:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: DIMENSIONAL_CORRIDOR
-    slot: 33
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 33
       material: END_PORTAL_FRAME
-      name: "#e6fff3Dimensional Corridor"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
+      upgrade: DIMENSIONAL_CORRIDOR
+      upgrade-name: 'Dimensional Corridor'
 
   celestial-ovens:
-    type: ZCOOKIECLICKER_UPGRADE
-    upgrade: CELESTIAL_OVENS
-    slot: 34
-    item:
+    pattern:
+      fileName: "cookie-upgrade"
+      pluginName: zCookieClicker
+      slot: 34
       material: FURNACE
-      name: "#e6fff3Celestial Ovens"
-      amount: "%amount-integer%"
-      lore:
-        - ""
-        - " &f⌂ #e6fff3Price#8c8c8c: #92bed8%price%"
-        - " &f☆ #e6fff3Amount#8c8c8c: #ffacd5%amount%"
-        - " &f⌚ #e6fff3CPS#8c8c8c: #969696%cps%"
-        - ""
-
+      upgrade: CELESTIAL_OVENS
+      upgrade-name: 'Celestial Ovens'
