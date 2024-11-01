@@ -33,7 +33,7 @@ public class CookiePlugin extends ZPlugin {
     public void onEnable() {
 
         LocalPlaceholder placeholder = LocalPlaceholder.getInstance();
-        placeholder.setPrefix("zcookiecliker");
+        placeholder.setPrefix("zcookieclicker");
 
         this.preEnable();
 
@@ -48,7 +48,7 @@ public class CookiePlugin extends ZPlugin {
         this.loadButtons();
         this.cookieManager.loadInventories();
 
-        this.registerCommand("zcookiecliker", new CommandCookieClicker(this), "cookiecliker", "cookie");
+        this.registerCommand("zcookieclicker", new CommandCookieClicker(this), "cookieclicker", "cookie");
         this.addListener(this.storageManager);
 
         this.addSave(Config.getInstance());

@@ -192,6 +192,7 @@ public class CookieManager extends ZUtils implements Listener {
 
         CookiePlayer cookiePlayer = new CookiePlayer(this.plugin);
         cookiePlayer.setCookie(dto.cookie());
+        cookiePlayer.setTotalCookie(dto.total_cookie());
 
         for (CookieUpgradeDTO upgradeDTO : upgradeDTOS) {
             cookiePlayer.getUpgrades().put(upgradeDTO.upgrade(), upgradeDTO.amount());
@@ -227,5 +228,9 @@ public class CookieManager extends ZUtils implements Listener {
 
     public UpgradeData getUpgrade(CookieUpgrade cookieUpgrade) {
         return this.upgrades.getOrDefault(cookieUpgrade, new UpgradeData(BigDecimal.ONE, BigDecimal.ZERO));
+    }
+
+    public BigDecimal getServerCPS() {
+        return this.players.values().stream().map(CookiePlayer::getCookiePerSeconds).reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 }

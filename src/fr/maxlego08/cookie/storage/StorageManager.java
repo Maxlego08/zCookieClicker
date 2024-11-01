@@ -17,12 +17,14 @@ import fr.maxlego08.sarah.SqliteConnection;
 import fr.maxlego08.sarah.database.DatabaseType;
 import fr.maxlego08.sarah.logger.JULogger;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
 public class StorageManager implements Listener {
@@ -95,15 +97,18 @@ public class StorageManager implements Listener {
     public void onQuit(PlayerQuitEvent event) {
 
         var scheduler = this.plugin.getInventoryManager().getScheduler();
-        scheduler.runTaskAsynchronously(() -> {
-            var player = event.getPlayer();
-            CookiePlayer cookiePlayer = this.plugin.getCookieManager().removeCookiePlayer(player);
-            if (cookiePlayer == null) return;
+        scheduler.runTaskAsynchronously(() -> updatePlayer(event.getPlayer()));
+    }
 
-            this.requestHelper.upsert("%prefix%players", table -> {
-                table.uuid("unique_id", player.getUniqueId()).primary();
-                table.decimal("cookie", cookiePlayer.getCookie());
-            });
+    public void updatePlayer(Player player) {
+        CookiePlayer cookiePlayer = this.plugin.getCookieManager().removeCookiePlayer(player);
+        if (cookiePlayer == null) return;
+
+        this.requestHelper.upsert("%prefix%players", table -> {
+            table.uuid("unique_id", player.getUniqueId()).primary();
+            table.string("username", player.getName());
+            table.decimal("cookie", cookiePlayer.getCookie());
+            table.decimal("total_cookie", cookiePlayer.getTotalCookie());
         });
     }
 
@@ -114,5 +119,13 @@ public class StorageManager implements Listener {
             table.string("upgrade", cookieUpgrade.name()).primary();
             table.decimal("amount", amount);
         }));
+    }
+
+    public List<CookiePlayerDTO> selectRanking() {
+        return this.requestHelper.select("%prefix%players", CookiePlayerDTO.class, table -> table.orderByDesc("cookie"));
+    }
+
+    public List<CookiePlayerDTO> selectRankingTotal() {
+        return this.requestHelper.select("%prefix%players", CookiePlayerDTO.class, table -> table.orderByDesc("total_cookie"));
     }
 }

@@ -10,6 +10,7 @@ public class CookiePlayer {
     private final CookiePlugin plugin;
     private final Map<CookieUpgrade, BigDecimal> upgrades = new HashMap<>();
     private BigDecimal cookie = BigDecimal.ZERO;
+    private BigDecimal totalCookie = BigDecimal.ZERO;
 
     public CookiePlayer(CookiePlugin plugin) {
         this.plugin = plugin;
@@ -17,6 +18,7 @@ public class CookiePlayer {
 
     public void add(BigDecimal value) {
         this.cookie = this.cookie.add(value);
+        this.totalCookie = this.totalCookie.add(value);
     }
 
     public void add(long value) {
@@ -33,6 +35,10 @@ public class CookiePlayer {
 
     public void setCookie(BigDecimal cookie) {
         this.cookie = cookie;
+    }
+
+    public void setTotalCookie(BigDecimal totalCookie) {
+        this.totalCookie = totalCookie;
     }
 
     public Map<CookieUpgrade, BigDecimal> getUpgrades() {
@@ -62,5 +68,9 @@ public class CookiePlayer {
 
     public void add(CookieUpgrade cookieUpgrade, int amount) {
         this.upgrades.put(cookieUpgrade, this.upgrades.getOrDefault(cookieUpgrade, BigDecimal.ZERO).add(BigDecimal.valueOf(amount)));
+    }
+
+    public BigDecimal getTotalCookie() {
+        return totalCookie;
     }
 }
